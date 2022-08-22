@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.构造函数的问题
+        function Star(uname,age){
+            this.uname = uname;
+            this.age = age;
+            
+        }
+        //console.dir(Star);
+        //可以查询到每个方法里都有对应的prototype原型对象
+
+        //原型对象上共享方法
+        Star.prototype.sing = function(){
+                console.log('我会唱歌');
+        }
+
+        var ldh = new Star('刘德华',18);
+        var zxc = new Star('周星驰',28);
+
+        //可以共享到prototype对象上的方法
+        ldh.sing();
+        zxc.sing();
+
+        //2.一般情况下，我们的公共属性定义到构造函数里面，公共的方法我们放到原型对象上
+        console.log(ldh.sing === zxc.sing);
+
+    </script>
+</body>
+</html>

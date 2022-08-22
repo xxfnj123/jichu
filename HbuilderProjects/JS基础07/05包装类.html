@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			
+			/*
+			 * 基本数据类型
+			 * 		String Number Boolean Null Undefined
+			 * 引用数据类型
+			 * 		Object
+			 * 
+			 * 在JS中为我们提供了三个包装类
+			 * 通过这三个包装类可以将基本数据类型的数据转换为对象
+			 * 		String()
+			 * 			可以将基本数据类型的字符串转换为String对象
+			 * 		Number()
+			 * 			可以将基本数据类型的数字转换为Number对象
+			 * 		Boolean()
+			 * 			可以将基本数据类型的布尔值转换为Boolean对象
+			 * 
+			 * 		但是注意：
+			 * 			我们在实际应用中不会使用基本数据类型的对象
+			 * 			如果使用基本数据类型的对象，
+			 * 			在进行比较时，可能会出现不可预期的结果
+			 * 	
+			 * 
+			 */
+			//创建一个Number类型的对象
+			var num = new Number(3);
+			//console.log(typeof num);
+			//创建一个String类型的对象
+			var str = new String("hello");
+			//console.log(typeof str);
+			//创建一个Boolean类型的对象
+			var bool = new Boolean(true);
+			//console.log(typeof bool);
+			
+			//向num中添加一个属性
+			num.hello = "abc";
+			//console.log(num.hello);
+			
+			var b = new Boolean(false);
+			//false也还运行，就像把Boolean对象转化了变成true
+			//也不符合逻辑，false!=true
+			/*
+			if(b){
+				alert("我运行了~~~");
+			}
+			*/
+			
+			
+			/*
+			 * 方法和属性只能添加给对象
+			 * 不能添加给基本数据类型
+			 * 
+			 * 当我们对一些基本数据类型的值去调用属性和方法时，
+			 * 		浏览器会临时使用包装类将其转化为对象
+			 * 		然后再调用对象的属性和方法
+			 * 		调用完之后，会转回基本数据类型
+			 * 
+			 * 
+			 */
+			var s = 123;
+			s = s.toString();//此时读取的是临时对象1
+			s.hello = "你好";//此时读取的是临时对象2，添加了hello属性
+			console.log(s);
+			console.log(s.hello);//此时读取的是临时对象3的hello属性，所以是undefined
+			console.log(typeof s);
+			
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

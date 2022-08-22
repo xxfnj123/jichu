@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>el挂载点</title>
+</head>
+<body>
+    {{ message }}
+    
+    <div id="app" class="app">
+        <!-- Vue会管理el选项命中元素及其内部的后代元素 -->
+        {{ message }}
+        <span>
+            <!--在el命中的元素内部可以去嵌套使用，并调用元素-->
+            {{ message }} 
+        </span>
+    </div>
+
+    <!-- 
+        无论是div标签还是p标签或是h2标签
+        都可以使用
+        建议挂载div标签，因为没有什么样式
+        一般都支持双标签使用，除了body和html
+        单标签不支持
+     -->
+    
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el:"#app",
+            //el:".app",
+            //el:"div",
+            /* 
+            无论是id选择器还是类选择或是标签选择器
+            都是可以使用的
+            但我们一般使用id选择器,因为id是唯一的
+            而类或标签可以指向不同的多个，容易出错
+             */
+            data:{
+                message:"黑马程序员!"
+            }
+        })
+
+        
+
+
+    </script>
+</body>
+</html>

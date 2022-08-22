@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			/*
+			层级选择器
+			通过层次关系定位样式的作用范围
+			层级选择器的每个层级的确定可以是标签名 id class
+			*/
+			
+			#p1 .c1{
+				color: red;
+			}
+			
+			/*
+			属性选择器
+			根据标签的某个属性的特定属性值确定样式的作用范围
+			*/
+			input[type=text]{
+				width: 300px;
+				height: 50px;
+			}
+			input[type=password]{
+				width: 300px;
+				height: 40px;
+			}
+			
+			
+			/*
+			分组选择器
+			可以将多个不同层级关系 不同class属性 id 标签名同时使用相同的样式效果
+			*/
+			
+			h1,.ch,.c2,#pa{
+				color: dodgerblue;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		
+	    <!--层级选择-->
+		<span>现在是2022年</span>
+		<p id="p1">
+			<font>
+				<span class="c1">七月份</span>
+			</font>
+			<br />
+			<span>十二号</span>
+		</p>
+		
+		
+		<!--属性选择-->
+		<input type="text" />
+		<input type="password" />
+		
+		
+		<!--分组选择-->
+		<h1 id="ha">日期日报</h1>
+		<h2 class="ch">日期日报</h2>
+		<span class="c2">日期日报</span>
+		<p id="pa">日期日报</p>
+		
+		
+	</body>
+</html>

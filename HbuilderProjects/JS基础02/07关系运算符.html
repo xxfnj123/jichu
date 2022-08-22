@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*
+			 * 类似数学运算符
+			 * > >= < <=
+			 * 如果符号两边的关系成立则返回true，否则返回false
+			 * 
+			 * 非数值的情况：
+			 * 会转换为数字再进行比较
+			 * 如果符号两侧都是字符串时，需要手动将其转换类型再进行比较
+			 * 
+			 * 注意：任何值和NaN作任何比较都会返回false
+			 */
+			
+			var result = 5 > 4;//true
+			result = 5 >= 4;//true
+			result = 5 < 4;//false
+			result = 5 <= 4;//false
+			
+			//console.log("result ="+result);
+			
+			
+			//console.log(1 >= true);
+			//console.log(1 > "0");
+			//console.log(10 > null);
+			//console.log(10 <= "hello");
+			//console.log(true > false);
+			
+			//比较两个字符串时，比较的是字符编码
+			//console.log("a" < "b");
+			//比较字符编码时是一位一位进行比较
+			//如果一样才比较下一位，可以借用它来对英文进行排序
+			//console.log("abc" < "bcd");
+			
+			//如果比较的两个字符串型的数字，可能得不到预期的结果
+			//注意：比较两个字符串型的数字时，一定一定要转型
+			console.log("123" < +"5");
+			
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

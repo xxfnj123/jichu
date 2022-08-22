@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<!--链接式-->
+		<link type="text/css" rel="stylesheet" href="css/01mycss.css" />
+		
+		<!--内嵌式-->
+		<style>
+			/* 选择器 */
+			span{
+				font-size: 20px;
+				color: gray;
+				background-color: burlywood;
+			}
+		</style>
+		
+		
+	</head>
+	<body>
+		
+		<!--
+			1.行内式引入
+			借助标签的style属性引入
+			style属性中的值语法为  样式名:样式值; 样式名:样式值; 。。。。。。
+			
+			2.内嵌式引入
+			将CSS样式的代码抽取出来  通过选择器确定样式作用范围
+			在head标签中 使用一对style标签定义CSS样式
+			在style标签中 注释写法/* */
+			减少相同代码的编写量  减少代码的维护工作
+			
+			3.链接式引入
+			行内式只能将样式作用于当前标签
+			内嵌式可以将样式作用于多个标签，但不能作用于其他网页
+			链接式可以将样式的作用范围扩大多个不同网页
+			链接式可以将CSS代码放入独立的.css文件中
+			可以使当前页面更加简洁
+			每一个需要引入样式的HTML
+			在head标签中使用link标签引入css文件即可
+			
+			4.当三种引入方式同时作用于一个标签并且样式有冲突
+			显示的是优先级原则————就近原则
+			离标签越近的先显示
+			
+		-->
+		
+		<!--行内式-->
+		<span style="font-size: 20px; color: red; background-color: burlywood;">
+			那年初夏
+		</span>
+		<br />
+		
+		<span>那年初夏</span>
+		<br />
+		
+		<span>那年初夏</span>
+		<br />
+		
+		<span>那年初夏</span>
+		<br />
+		
+		<span>那年初夏</span>
+		
+	</body>
+</html>

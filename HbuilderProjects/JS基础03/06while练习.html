@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*
+			 * 假如投资年利率为5%，试求从1000块涨到5000块，需要花费多少年
+			 * 
+			 * 1年 1000 1000*1.05=1050
+			 * 2年 1050 1050*1.05=1102.5
+			 * ...以此类推 
+			 */
+			
+			var n = 0,money = 1000;
+			
+			while(money <= 5000){
+				money = money * 1.05;
+				n++;
+			}
+			console.log("money = "+money);
+			console.log("需要花费"+n+"年");
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

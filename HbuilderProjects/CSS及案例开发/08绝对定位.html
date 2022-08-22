@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			
+			.d1{
+				width: 200px;
+				height: 200px;
+				background-color:yellow ;
+				/*
+				定位   绝对定位
+				当位置改变
+				该位置的坐标原点就会被释放
+				后续的其他标签就可以占用该位置
+				*/
+				position: absolute;
+				top: 200px;
+				left: 300px;
+			}
+			
+			.d2{
+				width: 200px;
+				height: 200px;
+				background-color:green ;
+				position: absolute;
+				top: 400px;
+				left: 500px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<div class="d1" >1</div>
+		<div class="d2" >2</div>
+	</body>
+</html>

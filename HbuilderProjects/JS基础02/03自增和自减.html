@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			
+			/*
+			 * 自增++
+			 * 		通过自增在变量自身的基础上加1
+			 * 		原变量的值会立即自增1
+			 * 		a++的值等于原变量的值
+			 * 		++a的值等于自增后的值
+			 * 
+			 * 
+			 * 自减--
+			 * 		通过自减在变量自身的基础上减1
+			 * 		原变量的值会立即自减1
+			 * 		a--的值等于原变量的值
+			 * 		--a的值等于自增后的值
+			 * 
+			 * 
+			 */
+			
+			/*自减*/
+			
+				var num = 10;
+				//num--;
+				//--num;
+				
+				//console.log(--num);
+				//console.log(num--);
+				
+				//console.log("num = "+num);
+			
+			
+			
+			/*自增*/
+			
+				var a = 1;
+				//使a自增1
+				//a++;
+				//++a;
+				
+				//console.log("a++ = " + a++);
+				//console.log("++a = " + ++a);
+				
+				//console.log("a = "+a);
+				
+				var c = 10;
+				//第一次c++是在10的基础上
+				//console.log(c++);
+				//第二次c++是在11的基础上
+				c++;
+				//console.log(c++);
+				
+				
+				
+				var d = 20;
+				
+				//console.log(++d);//21
+				//console.log(++d);//22
+				
+				/*
+				 * d++ = 20
+				 * ++d = 22
+				 * d   = 22
+				 * 从左到右执行
+				 */
+				//var result = d++ + ++d + d;
+				
+				//d = 20;
+				d = d++;
+				/*
+				 * var e = d++;
+				 * d = e;
+				 */
+				
+				//console.log("d = "+d);
+			
+			
+			
+			/*练习*/
+			
+				var n1 = 10,n2 = 20;
+				
+				var n = n1++;
+				console.log("n = "+n);
+				console.log("n1 = "+n1);
+				n = ++n1;
+				console.log("n = "+n);
+				console.log("n1 = "+n1);
+				n = n2--;
+				console.log("n = "+n);
+				console.log("n2 = "+n2);
+				n = --n2;
+				console.log("n = "+n);
+				console.log("n2 = "+n2);
+			
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

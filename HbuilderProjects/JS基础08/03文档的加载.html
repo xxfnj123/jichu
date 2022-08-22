@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			
+			/*
+			 * 加载页面时，是按照自上而下的顺序加载的
+			 * 读取到一行就执行一行，
+			 * 如果将script标签写在页面的上面
+			 * 在执行代码时，页面还没有加载
+			 * 页面还没有加载DOM对象，就已经加载完毕
+			 */
+			
+			/*
+			 * onload事件将会在整个页面加载完成之后才触发
+			 * 为window绑定一个onload事件
+			 * 		该事件对应的响应函数将会在页面加载完成之后执行
+			 * 		这样可以确保我们的代码执行时所有的DOM对象已经加载完毕了
+			 * 
+			 */
+			
+			window.onload = function(){
+				//获取按钮
+				var btn = document.getElementById("btn");
+				//为按钮添加一个单击响应函数
+				btn.onclick = function(){
+					alert("hello");
+				};
+			};
+			
+			
+			
+			
+			
+		</script>
+		
+	</head>
+	<body>
+		
+		<button id="btn" >点我一下</button>
+		
+		<!--
+			将JS代码编写到下部
+			就是为了等页面加载完毕后再执行JS代码
+			
+		-->
+		
+		
+		<!--<script>
+			
+			//获取按钮
+			var btn = document.getElementById("btn");
+			//为按钮添加一个单击响应函数
+			btn.onclick = function(){
+				alert("hello");
+			};
+			
+		</script>-->
+		
+		
+	</body>
+</html>

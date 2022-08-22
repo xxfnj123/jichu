@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-text指令</title>
+</head>
+<body>
+    <!-- 
+        v-text指令的作用是：设置标签的内容
+        默认写法会替换全部内容
+        使用差值表达式{{}}可以替换指定内容
+        内容可以写表达式
+     -->
+    <div id="app">
+
+        <!-- 前两个的广州会被替换，第三个不会被替换 -->
+        <h2 v-text="message+'!'">广州</h2>
+        <h2 v-text="info+'!'">广州</h2>
+        <h2>{{ message + '!' }}广州</h2>
+    </div>
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                message:"黑马程序员",
+                info:"前端与移动教研部"
+            }
+        })
+    </script>
+</body>
+</html>

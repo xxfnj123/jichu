@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*
+			 * 在js中表示其他进制数值
+			 * 		-表示十六进制数，以0x开头
+			 * 		-表示八进制数，以0开头
+			 * 		-表示二进制数，以0b开头
+			 * 			注意：但不是所有浏览器都能识别；
+			 */
+			
+			//十六进制
+			a = 0x10;
+			a = 0x11;
+			a = 0xCafe;
+			
+			//八进制
+			a = 010;
+			a = 011;
+			a = 020;
+			
+			//二进制
+			//a = 0b10;
+			
+			
+			//像"070"这种字符串
+			//有些浏览器会当成八进制解析，有些会当成十进制解析
+			a = "070";
+			
+			//可以在parseInt()中传递一个参数指定数字的进制
+			a = parseInt(a,10);
+			
+			
+			console.log(typeof a);
+			console.log(a);
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

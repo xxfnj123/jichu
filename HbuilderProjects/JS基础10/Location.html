@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<script type="text/javascript">
+			
+			/*
+			 * Location
+			 * 		对象中封装了浏览器的地址栏的信息
+			 * 
+			 * 
+			 */
+			
+			
+			window.onload = function(){
+				
+				var btn = document.getElementById("btn");
+				
+				btn.onclick = function(){
+					
+					//如果直接打印location，则可以获取到地址栏的信息，即当前页面的完整路径
+					//alert(location);
+					
+					
+					/*
+					 * 如果直接将location属性修改为一个完整的路径或相对路径
+					 * 则我们页面会自动跳转到该路径，并且自动生成相应的历史记录
+					 */
+					
+					//location = "https://www.taobao.com/";
+					//location = "Navigator.html";
+					
+					
+					
+					/*
+					 * assign()
+					 * 		用来跳转到其它页面，作用和直接修改location一样
+					 */
+					//location.assign("https://www.taobao.com/");
+					
+					
+					/*
+					 * reload()
+					 * 		用于重新加载当前页面，作用和刷新按钮一样
+					 * 		在方法中传递一个true作为参数，会强制清空缓存刷新页面
+					 */
+					//location.reload(true);
+					
+					
+					/*
+					 * replace()
+					 * 		可以使用新的页面替换当前页面
+					 * 		调用完毕也会跳转页面
+					 * 		但是不会生成历史记录
+					 * 		不能再退回到原来的页面
+					 * 
+					 */
+					location.replace("https://www.taobao.com/");
+					
+					
+					
+				};
+			};
+			
+			
+		</script>
+		
+	</head>
+	<body>
+		
+		<button id="btn">点我一下</button>
+		
+		<h1>Location</h1>
+		
+		<input type="text" />
+		<br />
+		<a href="Navigator.html">去Navigator</a>
+		
+	</body>
+</html>

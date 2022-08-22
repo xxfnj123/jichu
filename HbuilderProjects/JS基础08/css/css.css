@@ -1,0 +1,113 @@
+#totally{
+	/*border: 1px solid red;*/
+	width: 520px;
+	height: 550px;
+	margin: 0px auto;
+}
+
+#total{
+	/*border: 1px solid red;*/
+	width: 300px;
+	height: 510px;
+	
+}
+
+.inner{
+	float: left;
+	margin: 5px;
+}
+
+#btnList{
+	/*border: 1px solid red;*/
+	width: 200px;
+	height: 300px;
+}
+
+
+
+
+div.inner1{
+	border: 1px solid black;
+	width: 300px;
+	height: 350px;
+	float: left;
+}
+div.inner2{
+	border: 1px solid black;
+	width: 300px;
+	height: 100px;
+	float: left;
+}
+
+
+#div1{
+	/*border: 1px solid red;*/
+	width: 300px;
+	height: 100px;
+	margin: 0px auto;
+	
+}
+#div2{
+	/*border: 1px solid red;*/
+	width: 300px;
+	height: 100px;
+	margin: 0px auto;
+}
+#div3{
+	/*border: 1px solid red;*/
+	width: 300px;
+	height: 100px;
+	margin: 0px auto;
+}
+#div4{
+	/*border: 1px solid red;*/
+	width: 250px;
+	height: 80px;
+	margin: 20px auto;
+	font-size: 15px;
+}
+
+
+ul{
+	list-style: none;
+	
+}
+li{
+	border: 1px solid red;
+	background-color: lawngreen;
+}
+
+#div1 ul li{
+	font-size: 15px;
+	margin: 5px;
+	width: 50px;
+	height: 40px;
+	float: left;
+}
+#div2 ul li{
+	font-size: 15px;
+	margin: 5px;
+	width: 50px;
+	height: 40px;
+	float: left;
+}
+#div3 ul li{
+	font-size: 10px;
+	margin: 5px;
+	width: 50px;
+	height: 40px;
+	float: left;
+}
+
+#div4 input{
+	font-size: 15px;
+}
+
+button{
+	width: 220px;
+	height: 30px;
+	margin: 5px;
+}
+
+
+

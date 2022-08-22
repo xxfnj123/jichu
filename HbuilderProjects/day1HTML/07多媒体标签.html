@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		
+		<!--
+			图片
+			img
+			src source图片资源的路径
+			src 可以是电脑本地资源 也可以是网络资源
+			width宽度 
+			height高度
+			title鼠标悬停图片上显示的文字
+			alt图片加载失败显示的文字
+			给图片加超链接跟给文字加超链接步骤一致
+			放入<a></a>里面添加href target
+		-->
+		
+		<a href="https://www.xhsysu.edu.cn/" target="_blank">
+			<img src="img/xuexiao.png" width="300px" height="100px" title="学校" alt="此处是学校"/><br />
+		</a>
+		
+		<a target="_blank" href="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.jj20.com%2Fup%2Fallimg%2F1011%2F0Z11G44019%2F1FZ1144019-6.jpg&refer=http%3A%2F%2Fpic.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1659868958&t=9fbdf9d53cff4e8cad2f58694e90b841">
+			<img width="300px" height="200px" title="好看的图片" alt="此处是好看的图片" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.jj20.com%2Fup%2Fallimg%2F1011%2F0Z11G44019%2F1FZ1144019-6.jpg&refer=http%3A%2F%2Fpic.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1659868958&t=9fbdf9d53cff4e8cad2f58694e90b841" />
+		</a>
+		
+		
+		<hr />
+		<!--
+			音频
+			audio
+			src 音频文件的路径
+			controls 在页面上显示 功能控件
+			loop 控制循环播放
+			属性名与属性值一样 可以省略
+			controls="controls"只写controls也可以
+		-->
+		<audio src="music/01. LUPIN.mp3" controls="controls" loop="loop"></audio>
+		
+		<audio controls loop autoplay>
+			<source src="music/01. LUPIN.mp3"></source>
+			你的浏览器不支持该类型文件
+			
+		</audio>
+		
+		
+		
+		<hr />
+		<!--
+			视频
+			video
+		-->
+		<video src="video/juhao.mkv" controls="controls" loop="loop" width="30%"></video>
+		
+		<video controls loop autoplay width="30%">
+			<source src="video/juhao.mkv"></source>
+			你的浏览器不支持该类型文件
+			
+		</video>
+		
+		
+		
+		
+	</body>
+</html>

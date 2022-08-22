@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片切换</title>
+    <link rel="stylesheet" href="css/tupianqiehuan.css">
+</head>
+<body>
+
+    <!-- 
+        列表数据使用数组保存
+        v-bind指令可以设置元素属性，比如src
+        v-show和v-if都可以切换元素的显示状态
+        频繁切换使用v-show好一些
+     -->
+
+
+    <div id="mask">
+        <div class="center">
+            <h2 class="title">
+                <img src="imges/logo.png" alt="">
+                深圳创维校区环境
+            </h2>
+            <!-- 图片 -->
+            <img :src="imgArr[index]" alt="">
+            <!-- 左箭头 -->
+            <a href="javascript:void(0)" v-show="index!=0" @click="prve" class="left">
+                <img src="imges/prev.png" alt="">
+            </a>
+            <!-- 右箭头 -->
+            <a href="javascript:void(0)" v-show="index<imgArr.length-1" @click="next" class="right">
+                <img src="imges/next.png" alt="">
+            </a>
+        </div>
+    </div>
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el:"#mask",
+            data:{
+                imgArr:[
+                    "/Vue/02本地应用/imges/00.jpg",
+                    "/Vue/02本地应用/imges/01.jpg",
+                    "/Vue/02本地应用/imges/02.jpg",
+                    "/Vue/02本地应用/imges/03.jpg",
+                    "/Vue/02本地应用/imges/04.jpg",
+                    "/Vue/02本地应用/imges/05.jpg",
+                    "/Vue/02本地应用/imges/06.jpg",
+                    "/Vue/02本地应用/imges/07.jpg",
+                    "/Vue/02本地应用/imges/08.jpg",
+                    "/Vue/02本地应用/imges/09.jpg",
+                    "/Vue/02本地应用/imges/10.jpg",
+                ],
+                index:0,
+            },
+            methods:{
+                prve:function(){
+                    this.index--;
+                },
+                next:function(){
+                    this.index++;
+                },
+            }
+        })
+    </script>
+</body>
+</html>

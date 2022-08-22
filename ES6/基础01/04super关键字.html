@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //super 关键字调用父类普通函数
+        /* 
+
+         1.继承中，如果实例化子类输出一个方法，先看子类有没有这个方法，如果有就先执行子类的方法
+            如果子类没有这个方法，就会去父类里面查找是否有这个方法，有就执行
+
+         */
+        class Father{
+            say(){
+                return '我是爸爸';
+            }
+        }
+        class Son extends Father{
+            say(){
+                //console.log('我是儿子');
+                console.log(super.say() + '的儿子');
+                //super.say() 就是调用父类中的普通函数
+            }
+        }
+        var son = new Son();
+        son.say();
+
+
+    </script>
+</body>
+</html>

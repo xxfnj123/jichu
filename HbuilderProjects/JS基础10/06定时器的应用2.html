@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			
+			*{
+				margin: 0px;
+				padding: 0px;
+				
+			}
+			
+			#box1{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				position: absolute;
+				left: 0px;
+			}
+			
+			#box2{
+				width: 0px;
+				height: 1000px;
+				border: 1px solid black;
+				position: absolute;
+				left: 800px;
+				top: 0px;
+			}
+			
+			
+			
+			
+		</style>
+		
+		<script>
+			
+			window.onload = function(){
+				
+				var box1 = document.getElementById("box1");
+				var btn01 = document.getElementById("btn01");
+				var btn02 = document.getElementById("btn02");
+				
+				
+				
+				btn01.onclick = function(){
+					move(box1 , 800 , 20);
+				};
+				
+				
+				
+				btn02.onclick = function(){
+					move(box1 , 0 , 20);
+				};
+				
+	
+			};
+			
+			
+			
+			/*
+			 * 定义一个函数，执行简单动画
+			 * 参数：
+			 * 		obj    要执行动画的对象
+			 * 		target 执行动画的目标位置
+			 * 		speed  移动的速度（向左为负数，向右为正数）
+			 */
+			var timer;
+			function move(obj , target , speed){
+				//关闭上一个定时器
+				clearInterval(timer);
+				
+				//获取元素当前的位置
+				var current = parseInt(getStyle(obj,"left"));
+				
+				//判断速度的正负
+				/*
+				 * 如果从0向800px移动，则speed为正
+				 * 如果从800px向0移动，则speed为负
+				 * 
+				 */
+				if(current > target){
+					//此时速度应为负值
+					speed = -speed;
+				}
+				
+				
+				
+				
+				timer = setInterval(function(){
+						
+
+					//获取box1原来的left值
+					var oldValue = parseInt(getStyle(obj,"left"));
+						
+					//在旧值的基础上，定义新值
+					var newValue = oldValue + speed;
+						
+					//将新值设置给box1
+					obj.style.left = newValue + "px";
+						
+					//向左移动，判断newValue是否小于target
+					//向右移动，判断newValue是否大于target
+					
+					if((speed < 0 && newValue < target) || (speed > 0 && newValue > target)){
+						newValue == target;
+					}
+						
+					//当元素移动到0时，使其停止移动
+					if(newValue == target){		
+						clearInterval(timer);	
+					}
+						
+						
+						
+				},30);
+			}
+			
+			
+			
+			
+			
+			/*
+			 * 定义一个函数，用来获取指定元素的当前的样式
+			 * 参数：
+			 * 		obj   要获取样式的元素
+			 * 		name  要获取的样式名
+			 * 
+			 * 
+			 */
+			function getStyle(obj , name){
+				
+				//优先用这种方法
+				
+				if(window.getComputedStyle){
+					
+					//IE8以上及其他浏览器，有getComputedStyle方法
+					return getComputedStyle(obj,null)[name];
+					
+				}else{
+					
+					//IE8以下浏览器，没有getComputedStyle方法
+					return obj.currentStyle[name];
+					
+				}
+			};
+			
+			
+		</script>
+		
+		
+		
+		
+	</head>
+	<body>
+		
+		<button id="btn01">点击一下，div开始向右移</button>
+		<button id="btn02">点击一下，div开始向左移</button>
+		<br /><br />
+		<div id="box1"></div>
+		<div id="box2"></div>
+		
+		
+	</body>
+</html>

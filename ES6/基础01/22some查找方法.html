@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //some查找数据中是否有满足条件的元素
+        var arr = [10,30,48];
+        var flag = arr.some(function(value){
+            //return value >= 20;
+            return value < 3;
+        });
+        console.log(flag);
+
+        var arr1 = ['red','pink','blue'];
+        var flag1 = arr1.some(function(value){
+            return value == 'pink';
+        });
+        console.log(flag1);
+        /* 
+        按元素顺序进行查找，
+        一旦查找到就终止循环
+        不再往下进行循环
+         */
+
+
+        /* 
+
+        filter
+        查找所有满足条件的元素，并返回一个新的数组
+
+        some
+        查找到第一个满足条件的元素就终止循环
+        返回一个布尔值
+        
+         */
+
+
+    </script>
+</body>
+</html>

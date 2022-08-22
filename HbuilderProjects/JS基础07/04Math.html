@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			
+			/*
+			 * Math
+			 * 		Math和其他的对象不同，他不是一个构造函数
+			 * 		它属于一个工具类，不用创建对象
+			 * 		它里面封装了数学运算相关的属性和方法
+			 * 	比如：
+			 * 		Math.PI表示圆周率
+			 * 
+			 */
+			
+			//console.log(Math.PI);
+			
+			
+			/*
+			 * abs可以用来计算一个数的绝对值
+			 */
+			//console.log(Math.abs(-1));
+			
+			
+			/*
+			 * Math.ceil()
+			 * 		可以对一个数进行向上取整
+			 * 		小数位有值就自动进一
+			 */
+			//console.log(Math.ceil(1.4));
+			
+			
+			/*
+			 * Math.floor()
+			 * 		可以对一个数进行向下取整
+			 * 		小数位会被舍弃
+			 */
+			//console.log(Math.floor(1.9));
+			
+			
+			/*
+			 * Math.round()
+			 * 		四舍五入取整
+			 */
+			//console.log(Math.round(1.4));
+			//console.log(Math.round(1.5));
+			
+			
+			/*
+			 * Math.random()
+			 * 		生成 0 到 1 之间的随机数
+			 * 生成0-x之间的随机数
+			 * 		Math.round(Math.random()*x)
+			 * 生成1-10之间的随机数
+			 * 		Math.round(Math.random()*9)+1
+			 * 生成2-10之间的随机数
+			 * 		Math.round(Math.random()*8)+2
+			 * 
+			 * 生成x-y之间的随机数
+			 * 		Math.round(Math.random()*(y-x))+x
+			 * 
+			 */
+			
+			/*
+			for(var i=0;i<100;i++){
+				//生成0-10之间的随机数
+				//console.log(Math.round(Math.random()*10));
+				//生成1-10之间的随机数
+				//console.log(Math.round(Math.random()*9)+1);
+				//生成2-10之间的随机数
+				//console.log(Math.round(Math.random()*8)+2);
+				
+				//生成1-6之间的随机数
+				console.log(Math.round(Math.random()*5)+1);
+			}
+			*/
+			
+			
+			/*
+			 * max()
+			 * 		可以获取多个数中的最大值
+			 * min()
+			 * 		可以获取多个数中的最小值
+			 */
+			var max = Math.max(1,5,9,60,10,20,50,46);
+			//console.log(max);
+			var min = Math.min(1,5,9,60,10,20,50,46);
+			//console.log(min);
+			
+			
+			/*
+			 * Math.pow(x,y)
+			 * 		返回x的y次幂
+			 */
+			//console.log(Math.pow(4,3));
+			
+			
+			/*
+			 * Math.sqrt(x)
+			 * 		对x进行开方
+			 */
+			console.log(Math.sqrt(25));
+			
+			
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

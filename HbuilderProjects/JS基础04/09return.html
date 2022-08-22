@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			
+			function fun(){
+				alert("开始执行");
+				for(var i=0; i<5; i++){
+					if(i==2){
+						//break可以退出当前的循环
+						//break;
+						
+						//continue用于跳过档次循环
+						//continue;
+						
+						//return可以结束整个函数
+						return;
+					}
+					console.log(i);
+				}
+				alert("执行完毕");
+			}
+			//fun();
+			
+			
+			/*
+			 * 返回值可以是任意类型的数据
+			 * 也可以是一个对象
+			 * 也可以是一个函数
+			 */
+			
+			function fun2(){
+				return {name:"猪八戒"};
+			}
+			var a = fun2();
+			//console.log("a = "+a.name);
+			
+			
+			function fun3(){
+				//在函数内部再声明一个函数
+				function fun4(){
+					alert("我是fun4");
+				}
+				//将fun4函数对象作为返回值返回
+				return fun4;
+				//调用fun4()
+				//return fun4();
+			}
+			a = fun3();
+			//console.log(a);
+			//a();
+			fun3()();//这个写法等价于a()
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

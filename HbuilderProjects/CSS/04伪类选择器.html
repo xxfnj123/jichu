@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style>
+			
+			
+			/*
+			伪类选择器可以四个同时使用，也可以单个使用
+			同时使用要注意排放顺序
+			hover必须置于link和visited之后才是有效的
+			active必须置于hover之后才是有效的
+			伪类名称对大小写不敏感
+			*/
+			a:link{
+				color: black;
+				text-decoration: none;
+			}
+			a:visited{
+				color: darkgray;
+			}
+			a:hover{
+				color: blue;
+			}
+			a:active{
+				color: red;
+			}
+			
+			
+			div{
+				border: 1px double green;
+				width: 100px;
+				height: 100px;
+				background-color: blue;
+			}
+			div:hover{
+				background-color: yellow;
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<a href="https://cn.bing.com">搜索</a>
+		
+		<div></div>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		
+		<!--<style>
+			span{
+				display: inline-block;
+				width: 70px;
+			}
+		</style>-->
+		
+		
+		<script>
+			
+			
+			/*正*/
+			/*for(var i = 0 ; i < 5 ; i++){
+				for(var j = 0 ; j < i+1 ; j++){
+					document.write("*&nbsp;&nbsp;&nbsp;");
+				}
+				document.write("<br />");
+			}*/
+			
+			/*倒*/
+			/*for(var i = 0 ; i < 5 ; i++){
+				for(var j = 0 ; j < 5-i ; j++){
+					document.write("*&nbsp;&nbsp;&nbsp;");
+				}
+				document.write("<br />");
+			}*/
+			
+			
+			
+			/*
+			 * 打印九九乘法表
+			 */
+			
+			/*
+			for(var i = 1 ; i < 10 ; i++){
+				for(j = 1 ; j <= i ; j++){
+					document.write("<span style='display: inline-block; width: 70px;'>"+j+"*"+i+"="+i*j+"</span>" );
+				}
+				document.write("<br />");
+			}
+			*/
+			
+			
+			
+			
+			
+			/*
+			 * 打印出1-100之间所有的质数
+			 */
+			
+			//已知1不是质数，所以先打印2-100之间所有的数
+			
+			for(var i=2;i<=100;i++){
+				
+				//创建一个布尔值，来保存当前的数的状态
+				var flag=true;
+				
+				//判断i是不是质数
+				//获取2-i之间的所有数
+				for(var j=2;j<i;j++){
+					//判断i是否能被j整除
+					if(i%j==0){
+						//如果进入判断则证明i不是质数，修改flag值为false
+						flag=false;
+					}
+				}
+				//如果是质数，则打印i的值
+				if(flag){
+					console.log(i);
+				}
+				
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

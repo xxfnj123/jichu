@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			
+			//创建一个name变量
+			var name = "全局";
+			
+			//创建一个fun()函数
+			function fun(){
+				console.log(this.name);
+			}
+			
+			//创建两个对象
+			var obj = {
+				name:"孙悟空",
+				sayName:fun
+			};
+			var obj2 = {
+				name:"猪八戒",
+				sayName:fun
+			};
+			
+			//调用obj.sayName()时可以输出obj的name属性值
+			obj.sayName();
+			//调用obj2.sayName()时可以输出obj2的name属性值
+			obj2.sayName();
+			
+			//this指针就起到了作用分别指向两个不同的对象
+			
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

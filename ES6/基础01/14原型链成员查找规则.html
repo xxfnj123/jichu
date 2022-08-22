@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Star(uname,age){
+            this.uname = uname;
+            this.age = age;
+        }
+        Star.prototype.sing = function(){
+            console.log('我会唱歌');
+        }
+        //Object.prototype.gender = '男';
+        //Star.prototype.gender = '女';
+        var ldh = new Star('刘德华',18);
+        //ldh.gender = '男';
+        console.log(ldh.gender);
+
+        console.log(ldh.toString());
+
+
+        /* 
+        先从对象实例去查找有没有这个对象
+        没有就往上级去查找，还没有再往上级查找，
+        直到最上级找不到则输出undefined
+        此处，先找ldh，再找Star.prototype，再找Object.prototype
+        输出的话按就近原则，ldh有就直接输出ldh的对象
+
+        注意：
+        toString()方法只有Object对象中有，
+        ldh和Star中没有，但是输出ldh.toString()
+        也可以，因为逐层查找最后找得到就可以输出
+         */
+
+    </script>
+</body>
+</html>

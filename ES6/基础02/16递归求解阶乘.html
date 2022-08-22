@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //利用递归函数求1~n的阶乘 1*2*3*...*n
+        function fn(n){
+            if(n == 1){
+                return 1;
+            }
+            return n * fn(n - 1);
+        }
+        console.log(fn(4));
+        //详细思路
+        /* 
+        假如输入的是4
+        return 4*fn(3)
+        fn(3)=3*fn(2)
+        fn(2)=2*fn(1)
+        fn(1)=1
+        所以：
+        return 4*3*2*1 = 24
+        */
+    </script>
+</body>
+</html>

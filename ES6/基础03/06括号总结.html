@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //中括号：字符集合，匹配方括号中的任意字符
+        var reg = /^[abc]$/;//表示a/b/c任意一个即可，限制一位
+        console.log(reg.test('a'));
+        console.log(reg.test('b'));
+        console.log(reg.test('c'));
+        console.log('-------------------------------');
+        //大括号：量词符，里面表示重复次数
+        var r = /^a{3}$/;//表示a重复三次，aaa才符合规范
+        console.log(r.test('aaa'));
+        var e = /^abc{3}$/;//只有abccc才符合规范
+        console.log(e.test('abccc'));
+        console.log('-------------------------------');
+        //小括号：表示优先级
+        var g = /^(abc){3}$/;//只有abcabcabc才符合规范
+        console.log(g.test('abcabcabc'));
+
+        /* 
+        菜鸟工具里面有正则表达式匹配的在线测试，可以去测试练习
+         */
+
+    </script>
+</body>
+</html>

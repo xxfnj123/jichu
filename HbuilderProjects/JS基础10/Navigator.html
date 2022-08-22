@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<script type="text/javascript">
+			
+			/*
+			 * Navigator
+			 * 代表当前浏览器的信息，通过该对象可以来识别不同的浏览器
+			 * 由于历史原因，Navigator对象中的大部分属性都已经不能帮我们识别浏览器
+			 * 一般我们会使用userAgent来判断浏览器的信息
+			 * userAgent是一个字符串，这个字符串中包含有用来描述浏览器信息的内容
+			 * 不同的浏览器会有不同的userAgent
+			 * 
+			 * chrome浏览器
+			 * 		Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36
+			 * 
+			 * edge浏览器
+			 * 		Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36 Edg/103.0.1264.77
+			 * 
+			 * IE浏览器
+			 * 		Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729)
+			 * 		注意：版本不同MSIE后跟的数字不同
+			 * 
+			 * 注意：IE11中已经将微软和IE相关的标识都去除了，所以基本不能通过userAgent来识别IE11
+			 * 
+			 */
+			
+			//alert(navigator.appName);
+			
+			//console.log(navigator.userAgent);
+			
+			var ua = navigator.userAgent;
+			console.log(ua);
+			
+			
+			if(/Edg/.test(ua)){
+				alert("你是edge");
+			}else if(/Chrome/.test(ua)){
+				alert("你是chrome");
+			}else if(/MSIE/.test(ua)){
+				alert("你是IE");
+			}else if("ActiveXObject" in window){
+				alert("你是IE11");
+			}else{
+				alert("你啥也不是");
+			}
+			
+			
+			
+			
+			/*
+			 * 如果通过userAgent不能判断
+			 * 还可以通过一些浏览器中持有的对象来判断浏览器的信息
+			 * 比如：ActiveXObject
+			 * ActiveXObject这个属性是IE浏览器特有的，包括IE11
+			 * 其它浏览器都没有
+			 */
+			
+			/*
+			if("ActiveXObject" in window){
+				alert("你是IE")
+			}else{
+				alert("你不是IE");
+			}
+			*/
+			
+			
+			
+			
+		</script>
+		
+	</head>
+	<body>
+	</body>
+</html>

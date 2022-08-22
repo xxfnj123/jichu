@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>全选练习1</title>
+		<script>
+			
+			window.onload = function(){
+				
+				//获取四个多选框items
+				var items = document.getElementsByName("items");
+				
+				/*
+				 * 全选按钮
+				 * 		点击按钮以后，四个多选框都被选中
+				 */
+				
+				//为id为checkedAllBth的按钮添加一个单击响应函数
+				var checkedAllBth = document.getElementById("checkedAllBth");
+				checkedAllBth.onclick = function(){
+					
+					//获取四个多选框items
+					var items = document.getElementsByName("items");
+					
+					//遍历items
+					for(var i=0;i<items.length;i++){
+						//通过多选框的checked属性可以获取或设置多选框的选中状态
+						//设置四个多选框变成选中状态
+						items[i].checked = true;
+					}
+					//将全选/全不选设置为选中
+					checkedAllBox.checked = true;
+				};
+				
+				
+				
+				/*
+				 * 全不选按钮
+				 * 		点击按钮以后，四个多选框都不被选中
+				 */
+				
+				//为id为checkedNoBtn的按钮添加一个单击响应函数
+				var checkedNoBtn = document.getElementById("checkedNoBtn");
+				checkedNoBtn.onclick = function(){
+				
+					
+					//遍历items
+					for(var i=0;i<items.length;i++){
+						//通过多选框的checked属性可以获取或设置多选框的选中状态
+						//设置四个多选框变成未选中状态
+						items[i].checked = false;
+					}	
+					//将全选/全不选设置为不选中
+					checkedAllBox.checked = false;
+				};
+				
+				
+				/*
+				 * 反选按钮
+				 * 		点击按钮以后，四个多选框的状态会变反
+				 */
+				
+				//为id为checkedRevBth的按钮添加一个单击响应函数
+				var checkedRevBth = document.getElementById("checkedRevBth");
+				checkedRevBth.onclick = function(){
+					
+					//设置checkedAllBox为选中状态
+					checkedAllBox.checked = true;
+					
+					//遍历items
+					for(var i=0;i<items.length;i++){
+						//通过多选框的checked属性可以获取或设置多选框的选中状态
+						
+						//判断多选框的状态
+						/*
+						if(items[i].checked){
+							//证明多选框已选中，则改为未选中
+							items[i].checked = false;
+						}else{
+							//证明多选框未选中，则改为选中
+							items[i].checked = true;
+						}
+						*/
+						//同理可得：
+						items[i].checked = !items[i].checked;
+						
+						//判断四个多选框是否全选
+						//只要有一个没选中就不是全选
+						if(!items[i].checked){
+							//一旦进入判断，说明不是全选状态
+							//将checkedAllBox设置为未选中状态
+							checkedAllBox.checked = false;
+							
+						}
+					}		
+					//在反选时，也要判断四个多选框是否被选中
+					
+				};
+				
+				
+				/*
+				 * 提交按钮
+				 * 		点击按钮以后，弹出选中的value属性值
+				 */
+				
+				//为id为sendBth的按钮添加一个单击响应函数
+				var sendBth = document.getElementById("sendBth");
+				sendBth.onclick = function(){
+					//遍历items
+					for(var i=0;i<items.length;i++){
+						
+						//判断多选框是否被选中
+						if(items[i].checked){
+							alert(items[i].value);
+						}
+					}
+				};
+				
+				
+				/*
+				 * 全选/全不选多选框
+				 * 		当它选中时，其他的也选中，当它取消时，其余的也取消
+				 * 		
+				 * 在事件的响应函数中，响应函数是给谁绑定的this就是谁
+				 * 
+				 */
+				
+				//为id为checkedAllBox的按钮添加一个单击响应函数
+				var checkedAllBox = document.getElementById("checkedAllBox");
+				checkedAllBox.onclick = function(){
+					
+					//设置多选框的选中状态
+					for(var i=0;i<items.length;i++){
+						items[i].checked = this.checked;
+					}
+				};
+				
+
+				/*
+				 * 如果四个多相框全部选中
+				 * 则checkedAllBox也应该选中
+				 * 如果四个多相框不全选中
+				 * 则checkedAllBox也不应该选中
+				 */
+				
+				//为四个多选框分别绑定单击响应函数
+				for(var i=0;i<items.length;i++){
+					items[i].onclick = function(){
+						
+						//设置checkedAllBox为选中状态
+						checkedAllBox.checked = true;
+						
+						for(var j=0;j<items.length;j++){
+							//判断四个多选框是否全选
+							//只要有一个没选中就不是全选
+							if(!items[j].checked){
+								//一旦进入判断，说明不是全选状态
+								//将checkedAllBox设置为未选中状态
+								checkedAllBox.checked = false;
+								
+								//一旦进入判断，已经得出结果，不用再执行循环
+								break;
+							}
+						}	
+					};
+				}
+				
+				
+				
+				
+				
+			};
+			
+		</script>
+	</head>
+	<body>
+		
+		<form method="post" action="">
+			你喜欢的运动是？<input type="checkbox" id="checkedAllBox" />全选/全不选
+			
+			<br />
+			<input type="checkbox" name="items" value="足球" />足球
+			<input type="checkbox" name="items" value="篮球" />篮球
+			<input type="checkbox" name="items" value="羽毛球" />羽毛球
+			<input type="checkbox" name="items" value="乒乓球" />乒乓球
+			<br />
+			<input type="button" id="checkedAllBth" value="全  选" />
+			<input type="button" id="checkedNoBtn" value="全不选" />
+			<input type="button" id="checkedRevBth" value="反  选" />
+			<input type="button" id="sendBth" value="提  交" />
+			
+			
+			
+		</form>
+	</body>
+</html>

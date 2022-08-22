@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			
+			//创建一个数组
+			//var arr = new Array();
+			
+			//使用字面量来创建数组
+			//语法：	[]
+			//var arr = [];
+			//console.log(arr);
+			
+			//使用字面量创建数组时，可以指定数组中的元素
+			var arr = [1,2,3,4,5,10];
+			//console.log(arr[2]);
+			
+			//使用构造函数创建数组时，也可以同时添加元素
+			var arr2 = new Array(10,20,30);
+			//console.log(arr2);
+			
+			//创建一个数组，数组中只有一个元素
+			arr = [10];
+			//console.log(arr);
+			
+			//创建一个长度为10的数组
+			arr2 = new Array(10);
+			//console.log(arr2);
+			
+			
+			//数组中的元素可以是任意的数据类型
+			arr = ["hello",1,true,null,undefined];
+			//console.log(arr);
+			
+			
+			//也可以是对象
+			var obj = {name:"孙悟空"};
+			arr[arr.length] = obj;		
+			//console.log(arr[5].name);
+			
+			//也可以是函数
+			arr = [function(){alert(0)},function(){alert(1)}];
+			//console.log(arr);
+			//arr[1]();
+			
+			//数组中也可以放数组，如下这种数组称为二元数组
+			arr = [[1,2,3],[4,5,6],[7,8,9]];
+			//表示先找到数组[7,8,9],在找到[8]
+			console.log(arr[2][1]);
+			
+			
+			
+			
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

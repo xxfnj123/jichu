@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        var arr = ['red','green','pink','blue'];
+        arr.forEach(function(value){
+            if(value == 'green'){
+                console.log('找到你啦~~~');
+                return true;//在forEach里面return不会终止迭代
+            }
+            console.log(11);
+        });
+        */
+
+        
+        var arr = ['red','green','pink','blue'];
+        arr.some(function(value){
+            if(value == 'green'){
+                console.log('找到你啦~~~');
+                return true;//在some里面return代表终止遍历
+            }
+            console.log(11);
+        });
+        //如果查询数组中唯一的元素，用some是最好的选择
+
+
+
+        /*
+        var arr = ['red','green','pink','blue'];
+        arr.filter(function(value){
+            if(value == 'green'){
+                console.log('找到你啦~~~');
+                return true;//在filter里面return不会终止迭代
+            }
+            console.log(11);
+        });
+        */
+
+
+
+    </script>
+</body>
+</html>

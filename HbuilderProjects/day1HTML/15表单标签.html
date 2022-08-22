@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<!--
+			1.使用form标签包裹需要提交的数据范围
+			2.通过action属性确定数据提交的地址
+			3.通过method属性确定提交的方式
+			    get方式提交：
+			    1.数据通过地址栏传递 地址栏有长度限制 传递的数据量有限
+			    2.数据栏只能当文字 get方式只能提交文本类型的数据 不能上传文件
+			    3.数据显示在地址栏上 数据相对不安全
+			    post方式提交：
+			    1.数据不通过地址栏 单独打成数据包发送 数据包大小一般认为没有限制 传输数据量大
+			    2.数据包可以放文字和文件 post方式提交可以上传文件
+			    3.数据不显示在地址栏 数据相对安全
+			4.准备一个提交按钮
+			    1.不能是button button只是一个简单的按钮 不具备提交功能
+			    2.应该用submit submit具备提交功能
+			    3.submit 必须在form表单内部  标志提交的是所在当前的表单
+			5.给需要提交数据的元素 添加name属性和value属性
+			    name属性是给数据起名字 为了让后台区分不同数据的含义
+			    value属性用于定义提交的数据
+			6.清空按钮 reset
+		-->
+		
+		
+		<form action="https://www.baidu.com/" method="get">
+		
+		账号：<input type="text" name="username" /><br />
+		密码：<input type="password" name="password"/><br />
+		性别：
+		<input type="radio" name="gender" value="1" checked />男
+		<input type="radio" name="gender" value="0" />女
+		<br />
+		爱好：
+		<input type="checkbox" name="hobby" value="1" />篮球
+		<input type="checkbox" name="hobby" value="2" />足球
+		<input type="checkbox" name="hobby" value="3" />乒乓球
+		<input type="checkbox" name="hobby" value="4" />羽毛球
+		<br />
+		请选择照片：
+		<!--后续文件上传再处理-->
+		<input type="file" />
+		<br />
+		个人简介：
+		<textarea name="user" style="width: 100px; height: 100px;">请介绍一下你自己：</textarea>
+		<br />
+		籍贯：
+		<select name="jiguan" >
+			<option selected="selected">-请选择省份-</option>
+			<option value="gd" >广东</option>
+			<option value="bj" >北京</option>
+			<option value="sh" >上海</option>
+		</select>
+		<br />
+		
+		<input type="submit" value="提交"/>
+		<input type="reset" value="清空"/>
+		
+		</form>
+		
+	</body>
+</html>

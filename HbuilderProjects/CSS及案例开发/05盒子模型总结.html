@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#d1{
+				/*
+				 *width  宽度  内部的容量横向为**像素
+				 *height 高度  内部的容量纵向为**像素
+				 *盒子模型无论是内边距还是外边距的调整
+				 *都不会影响块标签内部的容量
+				 */
+				width: 200px;
+				height: 200px;
+				background-color: yellow;
+				border: 1px solid red;
+				/*padding: 20px;*/
+			}
+			
+			#d2{
+				width: 100px;
+				height: 100px;
+				background-color: green;
+				margin-top: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="d1">
+			<div id="d2"></div>
+		</div>
+	</body>
+</html>

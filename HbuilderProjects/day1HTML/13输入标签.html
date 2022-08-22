@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--文本框 text-->
+		账号：<input type="text" /><br />
+		<!--密码框 password-->
+		密码：<input type="password" /><br />
+		
+		<!--
+			如果要让多个单选框有互斥效果
+			那么需要给多个单选框里添加name属性
+			并且name属性的值是相同的
+			
+			通过checked属性控制其中一个选项被选中
+		-->
+		性别：
+		<!--单选框 radio-->
+		<input type="radio" name="gender" checked />男
+		<input type="radio" name="gender" />女
+		<br />
+		
+		爱好：
+		<!--多选框 checkbox-->
+		<input type="checkbox" />篮球
+		<input type="checkbox" />足球
+		<input type="checkbox" />乒乓球
+		<input type="checkbox" />羽毛球
+		<br />
+		
+		请选择照片：
+		<!--文件框 file-->
+		<input type="file" />
+		<br />
+		
+		个人简介：
+		<!--文本域 textarea-->
+		<textarea style="width: 100px; height: 100px;">请介绍一下你自己：</textarea>
+		<br />
+		
+		籍贯：
+		<!--下拉框 select option-->
+		<!--
+		    selected属性定义默认被选中的选项
+		    multiple属性控制全部展示
+		-->
+		<select multiple="multiple">
+			<option selected="selected">-请选择省份-</option>
+			<option>广东</option>
+			<option>北京</option>
+			<option>上海</option>
+		</select>
+		
+	</body>
+</html>

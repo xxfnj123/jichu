@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<!--划分成几行-->
+	<!--<frameset rows="100px,*,100px">
+		<frame src="top.html" />
+		<frame src="https://cn.bing.com"/>
+		<frame src="bottom.html"/>
+	</frameset>-->
+	
+	<!--<frameset rows="100px,*">
+		<frame src="top.html" />
+		<frame src="https://cn.bing.com"/>
+	</frameset>-->
+	
+	
+	<!--划分成几列-->
+	<!--<frameset cols="200px,200px,*">
+		<frame src="13输入标签.html" />
+		<frame src="15表单标签.html"/>
+		<frame src="https://cn.bing.com"/>
+	</frameset>-->
+	
+	<!--<frameset cols="200px,*">
+		<frame src="13输入标签.html" />
+		<frame src="https://cn.bing.com"/>
+	</frameset>-->
+	
+	
+	
+	
+	<!--frameset的嵌套-->
+	<frameset rows="100px,*,100px">
+		<frame src="top.html" />
+		<frameset cols="200px,*">
+		    <frame src="left.html" />
+		    <frame src="https://cn.bing.com" name="dakai"/>
+	    </frameset>
+		<frame src="bottom.html"/>
+	</frameset>
+	
+	<!--有frameset 不能有body-->
+</html>

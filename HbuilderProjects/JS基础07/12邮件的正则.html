@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			
+			/*
+			 * 电子邮件：
+			 * 	hello  .nihao  @  abc .com.cn
+			 * 
+			 * 规则：
+			 * 	1.任意字母、数字、_
+			 *  2..任意字母、数字、_
+			 *  3.@
+			 *  4.任意字母、数字
+			 *  5..任意字母（2-5位）
+			 *  6..任意字母（2-5位）
+			 * 
+			 * 
+			 * 	\w{3,} (\.\w+)* @ [A-z0-9]+ (\.[A-z]{2,5}){1,2}
+			 * 
+			 * 
+			 * 
+			 */
+			var emailReg = /^\w{3,}(\.\w+)*@[A-z0-9]+(\.[A-z]{2,5}){1,2}$/;
+			
+			var email = "123abc.hello@163.com.cn";
+			console.log(emailReg.test(email));
+			
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

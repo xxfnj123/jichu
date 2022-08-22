@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //边界符 ^ $
+        //正则表达式里面不需要加引号，无论是数字型还是字符串型
+        var rg = /^abc/;//^表示必须以abc开头
+        console.log(rg.test('abc'));
+        console.log(rg.test('babc'));
+        console.log('---------------------');
+        var re = /abc$/;//$表示必须以abc结尾
+        console.log(re.test('babc'));
+        console.log(re.test('abcd'));
+        console.log('---------------------');
+        var reg = /^abc$/;//精确匹配，要求字符串只能是abc才符合规范
+        console.log(reg.test('abc'));
+        console.log(reg.test('babc'));
+        console.log(reg.test('abcd'));
+
+    </script>
+</body>
+</html>

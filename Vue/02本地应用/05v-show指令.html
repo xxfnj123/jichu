@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-show指令</title>
+</head>
+<body>
+
+    <!-- 
+        v-show指令的作用：根据真假切换元素的显示状态
+        原理是修改元素的display，实现显示隐藏
+        指令后面的内容，最终都会解析为布尔值
+        true则显示元素，false则隐藏元素
+        数据改变之后，对应元素的显示状态会同步更新
+     -->
+
+
+    <div id="app">
+        <input type="button" value="切换显示状态" @click="changeisShow">
+        <input type="button" value="累加年龄" @click="addAge">
+        <img v-show="isShow" src="img/monkey.gif" alt="">
+        <img v-show="age>=18" src="img/monkey.gif" alt="">
+    </div>
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                isShow:false,
+                age:17
+            },
+            methods:{
+                changeisShow:function(){
+                    this.isShow = !this.isShow;
+                },
+                addAge:function(){
+                    this.age++;
+                    
+                }
+            },
+        })
+    </script>
+</body>
+</html>
